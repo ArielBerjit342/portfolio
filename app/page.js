@@ -2,312 +2,195 @@ const skills = [
   { name: "Python", percent: 95, type: "Language" },
   { name: "Web Scraping", percent: 94, type: "Data Extraction" },
   { name: "Selenium", percent: 90, type: "Automation" },
-  { name: "Pandas", percent: 92, type: "Data" },
-  { name: "PDF / HTML Parsing", percent: 91, type: "Document Processing" },
+  { name: "Pandas", percent: 92, type: "Data Processing" },
+  { name: "PDF / HTML Parsing", percent: 91, type: "Document Parsing" },
   { name: "REST APIs", percent: 86, type: "Backend" },
   { name: "PostgreSQL", percent: 87, type: "Database" },
-  { name: "MySQL", percent: 84, type: "Database" },
-  { name: "ETL Pipelines", percent: 90, type: "Data Engineering" }
+  { name: "MySQL", percent: 84, type: "Database" }
 ];
 
 const services = [
   {
-    file: "web_automation.py",
-    title: "Web Automation",
-    code: "def automate_task()",
-    text: "Automate repetitive workflows, browser actions, data entry, and scheduled jobs for continuous operations.",
-    stack: ["Selenium", "Puppeteer", "Playwright"]
+    title: "Web Scraping Systems",
+    text: "Scalable crawlers for static and dynamic websites with reliability guards, retries, and anti-blocking strategy."
   },
   {
-    file: "data_scraping.py",
-    title: "Data Scraping",
-    code: "def scrape_data()",
-    text: "Build robust crawlers for static and dynamic websites with anti-blocking, retries, and high-volume ingestion.",
-    stack: ["BeautifulSoup", "Requests", "Selenium"]
+    title: "Document Data Extraction",
+    text: "Parsing PDF, Word, and HTML documents to transform unstructured content into clean, structured datasets."
   },
   {
-    file: "document_parsing.py",
-    title: "PDF / HTML Data Parsing",
-    code: "def parse_documents()",
-    text: "Parse PDF, Word, and HTML documents to transform unstructured text into clean structured datasets.",
-    stack: ["lxml", "Pandas", "Regex"]
+    title: "Automation Workflows",
+    text: "Automated scripts and scheduled pipelines that reduce manual work and keep business operations running 24/7."
   },
   {
-    file: "etl_pipeline.py",
-    title: "ETL Pipelines",
-    code: "def run_pipeline()",
-    text: "Design reliable extract-transform-load workflows for large datasets and multi-source ingestion pipelines.",
-    stack: ["Python", "Pandas", "SQL"]
-  },
-  {
-    file: "api_development.py",
-    title: "API Development",
-    code: "def create_api()",
-    text: "Develop backend services and RESTful APIs for data access, integrations, and automation systems.",
-    stack: ["Python", "REST APIs", "JSON"]
-  },
-  {
-    file: "storage_layer.py",
-    title: "Data Storage Design",
-    code: "def design_schema()",
-    text: "Create normalized SQL schemas and optimize queries to maintain integrity and improve retrieval speed.",
-    stack: ["PostgreSQL", "MySQL", "Indexing"]
+    title: "ETL & Data Pipelines",
+    text: "High-volume extraction and transformation workflows focused on speed, resilience, and data consistency."
   }
 ];
 
-const projects = [
+const experience = [
   {
-    file: "apex_fintech.py",
-    impact: "10/2022 - 02/2026",
-    type: "Remote",
-    title: "Apex Fintech Solutions - Python Developer",
-    text: "Designed and optimized large-scale scraping and data processing systems, including PDF/HTML parsing, retry logic, anti-blocking strategies, and SQL-backed storage for reliable high-volume extraction.",
-    stack: ["Python", "BeautifulSoup", "Requests", "Selenium", "PostgreSQL"]
-  },
-  {
-    file: "endava.py",
-    impact: "07/2020 - 08/2022",
-    type: "Singapore",
-    title: "Endava - Python Developer",
-    text: "Built automated data extraction workflows, processed structured and semi-structured sources, and improved storage/retrieval performance through SQL optimization and robust debugging practices.",
-    stack: ["Python", "Automation", "Data Extraction", "MySQL"]
-  },
-  {
-    file: "thoughtworks.py",
-    impact: "09/2015 - 06/2020",
-    type: "Singapore",
-    title: "Thoughtworks - Web Developer",
-    text: "Developed Python automation scripts and data transformation logic while collaborating in delivery teams to maintain stable, high-performance processing systems.",
-    stack: ["JavaScript", "ReactJS", "NextJS", "Python"]
-  }
-];
-
-const timeline = [
-  {
-    year: "2022 - 2026",
-    title: "Apex Fintech Solutions",
+    company: "Apex Fintech Solutions",
     role: "Python Developer (Web Scraping / Data Processing)",
-    note: "Large-scale scraping architecture, parsing pipelines, anti-blocking logic, and SQL-backed storage."
+    time: "10/2022 - 02/2026 | Remote",
+    detail:
+      "Designed large-scale scraping systems, implemented robust parsing for HTML and document sources, and built reliable SQL-backed ingestion pipelines."
   },
   {
-    year: "2020 - 2022",
-    title: "Endava",
+    company: "Endava",
     role: "Python Developer (Data Extraction / Automation)",
-    note: "Automated extraction systems, robust data processing workflows, and storage optimization."
+    time: "07/2020 - 08/2022 | Singapore",
+    detail:
+      "Developed automated extraction workflows, optimized SQL storage, and improved processing stability for structured and semi-structured data."
   },
   {
-    year: "2015 - 2020",
-    title: "Thoughtworks",
+    company: "Thoughtworks",
     role: "Web Developer (JavaScript / UI Development)",
-    note: "Front-end delivery with Python automation support and data transformation workflows."
+    time: "09/2015 - 06/2020 | Singapore",
+    detail:
+      "Built web UI features and supported backend operations with Python automation and data transformation logic."
   }
 ];
-
-function Card({ children }) {
-  return <div className="card">{children}</div>;
-}
 
 export default function Home() {
   return (
-    <main className="page">
-      <section className="hero panel">
-        <div className="hero-grid">
-          <div className="hero-copy">
-            <p className="available">Available for freelance work</p>
-            <h1>
-              I&apos;m <span>Ariel Berjit</span>
-              <br />
-              Python Developer
-            </h1>
-            <p className="hero-subtitle">
-              Web Scraping / Data Extraction / Automation
-            </p>
-            <p className="lead">
-              Python Developer with 8+ years of experience building scalable
-              data extraction pipelines, parsing unstructured documents, and
-              automating high-volume workflows.
-            </p>
-            <p className="muted">Bacolod City, Philippines</p>
-            <div className="chips">
-              {[
-                "Python",
-                "Web Scraping",
-                "Data Extraction",
-                "Automation",
-                "ReactJS",
-                "NextJS"
-              ].map((chip) => (
-                <span key={chip}>{chip}</span>
-              ))}
-            </div>
-            <div className="cta">
-              <a href="#contact" className="btn primary">
-                Let&apos;s Talk
-              </a>
-              <a href="#projects" className="btn">
-                View Experience
-              </a>
-            </div>
-          </div>
+    <main className="site">
+      <div className="bg-orb orb-a" />
+      <div className="bg-orb orb-b" />
+      <div className="bg-orb orb-c" />
 
-          <aside className="terminal">
-            <p className="terminal-title">terminal</p>
-            <p className="code">$ python extraction_engine.py --mode production</p>
-            <p className="success">✓ Pipeline active · 99.9% data integrity</p>
-            <p className="code">class Developer:</p>
-            <p className="code">  name = &quot;Ariel Berjit&quot;</p>
-            <p className="code">  specialty = [&quot;Scraping&quot;, &quot;Parsing&quot;, &quot;Automation&quot;]</p>
-            <p className="code">  location = &quot;Philippines&quot;</p>
-            <p className="code">  years = 8+</p>
-          </aside>
+      <section className="hero">
+        <div className="top-badge">Open to freelance projects</div>
+        <h1>
+          Ariel Berjit
+          <span>Python Developer</span>
+        </h1>
+        <p className="hero-role">
+          Web Scraping / Data Extraction / Automation
+        </p>
+        <p className="hero-summary">
+          Python Developer with 8+ years of experience building robust data
+          extraction pipelines, large-scale scraping systems, and automation
+          workflows that deliver reliable structured data.
+        </p>
+        <div className="hero-actions">
+          <a href="#contact" className="btn btn-primary">
+            Hire Me
+          </a>
+          <a href="#experience" className="btn btn-ghost">
+            See Experience
+          </a>
         </div>
       </section>
 
-      <section className="stats">
+      <section className="metrics">
         {[
-          ["8+ yrs", "Experience"],
-          ["3", "Companies"],
-          ["1000+", "Automation Jobs"],
-          ["24/7", "Pipeline Reliability"]
-        ].map(([v, l]) => (
-          <Card key={l}>
-            <h3>{v}</h3>
-            <p>{l}</p>
-          </Card>
+          ["8+", "Years Experience"],
+          ["3", "Global Companies"],
+          ["1000+", "Automated Runs"],
+          ["99.9%", "Data Reliability"]
+        ].map(([value, label]) => (
+          <article className="metric-card" key={label}>
+            <h3>{value}</h3>
+            <p>{label}</p>
+          </article>
         ))}
       </section>
 
-      <section className="panel">
-        <p className="code">def about_me():</p>
-        <h2>Python Developer & Data Extraction Specialist</h2>
-        <Card>
-          <p>
-            I design and implement robust scraping frameworks that parse PDF,
-            Word, and HTML documents and convert unstructured content into
-            structured formats. My work focuses on performance, reliability,
-            data integrity, and handling edge cases in real-world environments.
-          </p>
-          <p className="code">return &quot;Let&apos;s build something amazing!&quot;</p>
-        </Card>
+      <section className="panel about">
+        <div>
+          <p className="eyebrow">ABOUT</p>
+          <h2>Crafting Reliable Data Infrastructure</h2>
+        </div>
+        <p>
+          I specialize in turning messy, unstructured sources into accurate,
+          structured datasets. From crawling websites to parsing document files
+          and designing resilient pipelines, I build systems that prioritize
+          performance, maintainability, and real-world reliability.
+        </p>
       </section>
 
       <section className="panel">
-        <p className="code">./skills --visualize</p>
-        <h2>Technical Skills</h2>
-        <div className="grid two">
+        <div className="section-head">
+          <p className="eyebrow">SKILLS</p>
+          <h2>Technical Expertise</h2>
+        </div>
+        <div className="skills-grid">
           {skills.map((skill) => (
-            <Card key={skill.name}>
-              <div className="row">
+            <article key={skill.name} className="skill-card">
+              <div className="skill-row">
                 <strong>{skill.name}</strong>
                 <span>{skill.percent}%</span>
               </div>
-              <div className="bar">
-                <span style={{ width: `${skill.percent}%` }} />
+              <div className="skill-bar">
+                <div style={{ width: `${skill.percent}%` }} />
               </div>
-              <p className="muted">{skill.type}</p>
-            </Card>
+              <p>{skill.type}</p>
+            </article>
           ))}
         </div>
       </section>
 
       <section className="panel">
-        <p className="code">class Services:</p>
-        <h2>What I Build</h2>
-        <div className="grid three">
-          {services.map((service) => (
-            <Card key={service.title}>
-              <p className="file">{service.file}</p>
-              <h3>{service.title}</h3>
-              <p className="code">{service.code}</p>
-              <p>{service.text}</p>
-              <div className="chips">
-                {service.stack.map((t) => (
-                  <span key={t}>{t}</span>
-                ))}
-              </div>
-            </Card>
-          ))}
+        <div className="section-head">
+          <p className="eyebrow">SERVICES</p>
+          <h2>What I Deliver</h2>
         </div>
-      </section>
-
-      <section id="projects" className="panel">
-        <p className="code">experience_timeline.py</p>
-        <h2>Career Journey</h2>
-        <div className="timeline">
-          {timeline.map((item) => (
-            <Card key={item.title}>
-              <p className="file">{item.year}</p>
+        <div className="service-grid">
+          {services.map((item) => (
+            <article key={item.title} className="service-card">
               <h3>{item.title}</h3>
-              <p className="muted">{item.role}</p>
-              <p>{item.note}</p>
-            </Card>
+              <p>{item.text}</p>
+            </article>
           ))}
         </div>
       </section>
 
-      <section className="panel">
-        <p className="code">from portfolio import *</p>
-        <h2>Professional Highlights</h2>
-        <div className="grid three">
-          {projects.map((project) => (
-            <Card key={project.title}>
-              <p className="file">{project.file}</p>
-              <p className="muted">
-                {project.impact} · {project.type}
-              </p>
-              <h3>{project.title}</h3>
-              <p>{project.text}</p>
-              <div className="chips">
-                {project.stack.map((t) => (
-                  <span key={t}>{t}</span>
-                ))}
-              </div>
-            </Card>
+      <section id="experience" className="panel">
+        <div className="section-head">
+          <p className="eyebrow">EXPERIENCE</p>
+          <h2>Career Highlights</h2>
+        </div>
+        <div className="timeline">
+          {experience.map((item) => (
+            <article className="timeline-item" key={item.company}>
+              <p className="timeline-time">{item.time}</p>
+              <h3>{item.company}</h3>
+              <p className="timeline-role">{item.role}</p>
+              <p>{item.detail}</p>
+            </article>
           ))}
         </div>
       </section>
 
-      <section className="panel">
-        <p className="code">education.json</p>
-        <h2>Education</h2>
-        <Card>
-          <p>
-            <strong>Singapore Institute of Technology (SIT)</strong>
-          </p>
+      <section className="panel education">
+        <p className="eyebrow">EDUCATION</p>
+        <h2>Academic Foundation</h2>
+        <article className="edu-card">
+          <h3>Singapore Institute of Technology (SIT)</h3>
           <p>B.Sc. in Computer Science</p>
-          <p className="muted">08/2012 - 07/2015</p>
-        </Card>
+          <p className="edu-date">08/2012 - 07/2015</p>
+        </article>
       </section>
 
-      <section id="contact" className="panel">
-        <p className="code">// contact</p>
-        <h2>Let&apos;s Build Together</h2>
-        <Card>
-          <p>
-            Need web scraping, document parsing, automation, or data pipelines?
-            I can help design and build reliable systems tailored to your
-            business goals.
-          </p>
-          <p>
-            <strong>Email:</strong> berjitariel342@gmail.com
-          </p>
-          <p>
-            <strong>LinkedIn:</strong>{" "}
-            <a
-              href="https://linkedin.com/in/ariel-berjit-9166a4404"
-              target="_blank"
-              rel="noreferrer"
-            >
-              linkedin.com/in/ariel-berjit-9166a4404
-            </a>
-          </p>
-          <p>
-            <strong>Location:</strong> Bacolod City, Philippines
-          </p>
-          <p>
-            <strong>Response time:</strong> Usually within 24 hours
-          </p>
-        </Card>
+      <section id="contact" className="panel contact">
+        <p className="eyebrow">CONTACT</p>
+        <h2>Let&apos;s Build Something Great</h2>
+        <p>
+          If you need scraping, data extraction, or automation systems, I can
+          help build scalable and dependable solutions for your business.
+        </p>
+        <div className="contact-grid">
+          <a href="mailto:berjitariel342@gmail.com">berjitariel342@gmail.com</a>
+          <a
+            href="https://linkedin.com/in/ariel-berjit-9166a4404"
+            target="_blank"
+            rel="noreferrer"
+          >
+            linkedin.com/in/ariel-berjit-9166a4404
+          </a>
+          <span>Bacolod City, Philippines</span>
+        </div>
       </section>
     </main>
   );
